@@ -1,0 +1,82 @@
+.leftbar {
+  display: flex;
+  flex-direction: column;
+  height: calc(80vh - 40px);
+  min-width: 250px;
+  width: 30%;
+  font-size: 25px;
+  font-weight: 500;
+  overflow: auto;
+}
+/* Event.js */
+.event {
+  padding: 10px 0px 10px 0px;
+  cursor: pointer;
+}
+.event:hover {
+  background-color: blue;
+}
+/* EventData.js  */
+.eventdata {
+  height: calc(80vh - 80px);
+  overflow: auto;
+}
+.eventdata > div {
+  padding: 10px;
+}
+/* scroll  */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: black;
+  width: 5px;
+}
+/* TabBar.js */
+.tabbar {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  overflow: auto;
+  width: 50vw;
+}
+/* TabItem.js */
+.tabItem {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+  min-width: 160px;
+  font-size: 20px;
+  align-items: center;
+}
+.tabItem:first-child {
+  margin-left: 10px;
+}
+.tabItem:hover {
+  background-color: blue;
+}
+.tabcut {
+  visibility: hidden;
+}
+.tabcut > svg {
+  fill: rgb(216, 91, 91);
+}
+.tabItem:hover .tabcut {
+  visibility: visible;
+}
+@media (width<600px) {
+  .tabItem {
+    font-size: 15px;
+    min-width: 130px;
+    gap: 5px;
+  }
+  .leftbar {
+    min-width: 200px;
+    font-size: 20px;
+  }
+}
